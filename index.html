@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="app.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo ">portfolio</a>
+        <nav class="navbar">
+            <a href="#" >HOME</a>
+            <a href="#" >ABOUT</a>
+            <a href="#" >SKILL</a>
+            <a href="#" >CONTACT</a>
+        </nav>
+    </header> 
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello ,It's me </h3>
+            <h1>ANSHIKA SINGH</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+            <p> web designer</p>
+           
+            <div class="home-sci">
+                <a href="https://www.instagram.com/anshii.ii28?igsh=MXZhNzRvb3p2czBlMg==" style="--i:5"><i class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me/qr/2TPVSDE5VLBWM1" style="--i:6"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="https://www.linkedin.com/in/anshika-singh-1a503126b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" styel="--i:7"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/ANSHIKAA-SINGH" style="--i:8"><i class='bx bxl-github' ></i></a>
+                <a href="anshiisingh2808@gmail.com" style="--i:9"><i class='bx bxl-gmail' ></i></a>
+            </div>
+            <a href="c:\Users\krank\OneDrive\Desktop\my resume.pdf" class="btn-box">DOWNLOAD CV</a>
+        </div>
+        <div class="home-img">
+        <img src="PIC.jpeg" alt="image">
+</div>
+    </section>
+    <!--aout section-->
+    <section class="about" id="about" style="background-color: rgb(22, 70, 91);">
+        <div class="about-img">
+        <img src="my pic.jpeg">
+    </div> 
+    <div class="about-content">
+        <h2 class="heading">ABOUT<span>Me</span></h2>
+        <p>Sophomore at National Institute of Technology,Patna
+            My name is Anshika Singh and I am from Bihar. I have interest in learning new technologies and I am also learning Data
+            Structures and Web development <p>
+
+
+            <p>I have completed my intermidiate education from novel creative academy CBSE board with 93.4%, and secondary education from gurukul vidyapeeth
+                CBSE board with 87%.
+            <p>
+            <p>Currently i am student in national institue of technology patna in electrical department<p>
+
+            <p>I have good communication and management skills.I am passionate about improving my skills and
+            use them for the growth of society.<p>
+        </div>
+    </section>
+   <!--contact section design-->
+   <section class="contact" id="contact" style="background-color: rgb(22, 70, 91);">
+    <h1 class="heading">Contact<span>Me</span></h1>
+    <form onsubmit="sendEmail(), reset(); return false;">
+        <input type="text" id="name" placeholder="YOUR NAME" required>
+        <input type="email" id="email" placeholder="EMAIL ID" required>
+        <input type="text" id="phone" placeholder="PHONE NUMBER" required>
+        <textarea id="message" rows="4" placeholder="YOUR MESSAGE" style="background-color:white; color: black;"></textarea>
+        <button type="submit" onclick="sendEmail">SEND</button>
+    </form>
+   </section>
+   
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        const form=document.querySelector("form");
+        function sendEmail(){
+            let name=document.getElementById("name").vlaue;
+            let email=document.getElementById("email").vlaue;
+            let phone=document.getElementById("phone").vlaue;
+            let message=document.getElementById("message").vlaue;
+           let body="name:" +name + "<br/> email:" +email+ "<br/> phone:" + phone + "<br/>" +message;
+     console.log(body)
+            Email.send({
+          SecureToken : "c1604a43-41ae-4d0d-b333-c1fc598e715d",
+          To : 'anshiisingh2808@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "NEW CONTACT FORM",
+    Body : "and this is body"
+}).then(
+  message => alert("Message sent succesfully")
+);
+        }
+        
+    </script>
+</body>
+</html>
